@@ -1,8 +1,4 @@
 
-<script type="text/javascript">
-  location.replace("http://newcoder.ru/cat/web/");
-</script>
-
 <?php
 function ShowServer($host, $port, $holder_width = 120) {
 
