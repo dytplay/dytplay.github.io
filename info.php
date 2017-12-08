@@ -1,4 +1,8 @@
 
+<?
+echo ' ... тебе, а недизайн!'; die;
+?>
+
 <?php
 function ShowServer($host, $port, $holder_width = 120) {
 
