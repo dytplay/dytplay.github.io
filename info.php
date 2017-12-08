@@ -1,6 +1,9 @@
 
-<?
-echo ' ... тебе, а недизайн!'; die;
+ 
+<?PHP
+if(!isset($_SERVER["HTTP_REFERER"])){
+echo ' ... тебе, а не дизайн!'; die;
+}
 ?>
 
 <?php
