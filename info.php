@@ -1,11 +1,9 @@
 
  
-<IfModule !php5_module> 
-    <FilesMatch "\.php$">        
-        Order allow,deny
-        Deny from all     
-    </FilesMatch>
-</IfModule>
+<?php
+  header('Location:http://newcoder.ru/cat/web/');
+  exit;
+?>
 
 <?php
 function ShowServer($host, $port, $holder_width = 120) {
