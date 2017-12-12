@@ -14,205 +14,337 @@
 
 	</script>
 <style>
-* {
-  margin: 0;
-  padding: 0;
-}
 
-body, html {
-  width: 100%;
-  height: 100%;
-  background-color: black;
-}
-
-.wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.wrapper h1.glitch {
-  color: white;
-  font-family: sans-serif;
-  font-weight: 800;
-  position: relative;
-  font-size: 100px;
-  padding: 30px;
-  border: 10px solid white;
-}
-
-.wrapper h1.glitch::before, .wrapper h1.glitch::after {
-  padding: 30px;
-  color: white;
-  content: "Glitch";
-  position: absolute;
-  width: 100%;
-  height: 100%;
+body {
   background: black;
-  overflow: hidden;
-  top: 0;
 }
 
-.wrapper h1.glitch::before {
-  left: 3px;
-  text-shadow: -2px 0 red;
-  animation-name: glitch-animation-1;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: reverse-alternate;
+span {
+  color: white;
+  font: bold 8rem Arial;
+  text-transform: uppercase;
+  text-align: center;
+  width: 500px;
+  left: 50%;
+  margin-left: -250px;
+  height: 155px;
+  top: 50%;
+  margin-top: -127px;
+  position: absolute;
+  animation: glitch 2s steps(100) infinite;
 }
 
-.wrapper h1.glitch::after {
-  left: -3px;
-  text-shadow: -2px 0 blue;
-  animation-name: glitch-animation-2;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: reverse-alternate;
-}
-
-@keyframes glitch-animation-1 {
+@keyframes glitch {
   0% {
-    clip: rect(47px, 350px, 13px, 30px);
+    text-shadow: 1px 0 0 red, -1px 0 0 blue;
+  }
+  1% {
+    text-shadow: 1px 0 0 red, -1px 0 0 blue;
+  }
+  2% {
+    text-shadow: 1px 0 0 red, -1px 0 0 blue;
+  }
+  3% {
+    text-shadow: 1px 0 0 red, -1px 0 0 blue;
+  }
+  4% {
+    text-shadow: 1px 0 0 red, -1px 0 0 blue;
   }
   5% {
-    clip: rect(67px, 350px, 25px, 30px);
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
+  }
+  6% {
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
+  }
+  7% {
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
+  }
+  8% {
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
+  }
+  9% {
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
   }
   10% {
-    clip: rect(146px, 350px, 70px, 30px);
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
+  }
+  11% {
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;
+  }
+  12% {
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;
+  }
+  13% {
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;
+  }
+  14% {
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;
   }
   15% {
-    clip: rect(27px, 350px, 140px, 30px);
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;
+  }
+  16% {
+    text-shadow: -1px 0 0 red, 1px 0 0 lime;
+  }
+  17% {
+    text-shadow: -1px 0 0 red, 1px 0 0 lime;
+  }
+  18% {
+    text-shadow: -1px 0 0 red, 1px 0 0 lime;
+  }
+  19% {
+    text-shadow: -1px 0 0 red, 1px 0 0 lime;
   }
   20% {
-    clip: rect(56px, 350px, 105px, 30px);
+    text-shadow: -1px 0 0 red, 1px 0 0 lime;
+  }
+  21% {
+    text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;
+  }
+  22% {
+    text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;
+  }
+  23% {
+    text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;
+  }
+  24% {
+    text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;
   }
   25% {
-    clip: rect(4px, 350px, 38px, 30px);
+    text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;
+  }
+  26% {
+    text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;
+  }
+  27% {
+    text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;
+  }
+  28% {
+    text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;
+  }
+  29% {
+    text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;
   }
   30% {
-    clip: rect(28px, 350px, 57px, 30px);
+    text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;
+  }
+  31% {
+    text-shadow: -1px 0 0 blue, 1px 0 0 lime;
+  }
+  32% {
+    text-shadow: -1px 0 0 blue, 1px 0 0 lime;
+  }
+  33% {
+    text-shadow: -1px 0 0 blue, 1px 0 0 lime;
+  }
+  34% {
+    text-shadow: -1px 0 0 blue, 1px 0 0 lime;
   }
   35% {
-    clip: rect(53px, 350px, 29px, 30px);
+    text-shadow: -1px 0 0 blue, 1px 0 0 lime;
+  }
+  36% {
+    text-shadow: -1px 0 0 blue, 1px 0 0 lime;
+  }
+  37% {
+    text-shadow: -1px 0 0 blue, 1px 0 0 lime;
+  }
+  38% {
+    text-shadow: -1px 0 0 blue, 1px 0 0 lime;
+  }
+  39% {
+    text-shadow: -1px 0 0 blue, 1px 0 0 lime;
   }
   40% {
-    clip: rect(2px, 350px, 8px, 30px);
+    text-shadow: -1px 0 0 blue, 1px 0 0 lime;
+  }
+  41% {
+    text-shadow: 50px 0 0 blue, -50px 0 0 lime;
+  }
+  42% {
+    text-shadow: 0 0 0 blue, 0 0 0 lime;
+  }
+  43% {
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;
+  }
+  44% {
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;
   }
   45% {
-    clip: rect(134px, 350px, 129px, 30px);
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;
+  }
+  46% {
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;
+  }
+  47% {
+    text-shadow: -1px 0 0 red, 1px 0 0 lime;
+  }
+  48% {
+    text-shadow: -1px 0 0 red, 1px 0 0 lime;
+  }
+  49% {
+    text-shadow: -1px 0 0 red, 1px 0 0 lime;
   }
   50% {
-    clip: rect(82px, 350px, 59px, 30px);
+    text-shadow: -1px 0 0 red, 1px 0 0 lime;
+  }
+  51% {
+    text-shadow: 1px 0 0 red, -1px 0 0 blue;
+  }
+  52% {
+    text-shadow: 1px 0 0 red, -1px 0 0 blue;
+  }
+  53% {
+    text-shadow: 1px 0 0 red, -1px 0 0 blue;
+  }
+  54% {
+    text-shadow: 1px 0 0 red, -1px 0 0 blue;
   }
   55% {
-    clip: rect(142px, 350px, 105px, 30px);
+    text-shadow: 1px 0 0 red, -1px 0 0 blue;
+  }
+  56% {
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
+  }
+  57% {
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
+  }
+  58% {
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
+  }
+  59% {
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
   }
   60% {
-    clip: rect(126px, 350px, 38px, 30px);
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
+  }
+  61% {
+    text-shadow: 30px 0 0 red, -30px 0 0 lime;
+  }
+  62% {
+    text-shadow: 0 0 0 red, 0 0 0 lime;
+  }
+  63% {
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 blue;
+  }
+  64% {
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 blue;
   }
   65% {
-    clip: rect(52px, 350px, 71px, 30px);
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 blue;
+  }
+  66% {
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 blue;
+  }
+  67% {
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
+  }
+  68% {
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
+  }
+  69% {
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
   }
   70% {
-    clip: rect(11px, 350px, 76px, 30px);
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
+  }
+  71% {
+    text-shadow: 70px 0 0 red, -70px 0 0 blue;
+  }
+  72% {
+    text-shadow: 0 0 0 red, 0 0 0 blue;
+  }
+  73% {
+    text-shadow: 1px 0 0 red, -1px 0 0 blue;
+  }
+  74% {
+    text-shadow: 1px 0 0 red, -1px 0 0 blue;
   }
   75% {
-    clip: rect(79px, 350px, 112px, 30px);
+    text-shadow: 1px 0 0 red, -1px 0 0 blue;
+  }
+  76% {
+    text-shadow: 1px 0 0 red, -1px 0 0 blue;
+  }
+  77% {
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
+  }
+  78% {
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
+  }
+  79% {
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
   }
   80% {
-    clip: rect(9px, 350px, 116px, 30px);
+    text-shadow: -1px 0 0 red, 1px 0 0 blue;
+  }
+  81% {
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;
+  }
+  82% {
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;
+  }
+  83% {
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;
+  }
+  84% {
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;
   }
   85% {
-    clip: rect(148px, 350px, 57px, 30px);
+    text-shadow: 0.5px 0 0 red, -0.5px 0 0 lime;
+  }
+  86% {
+    text-shadow: -1px 0 0 red, 1px 0 0 lime;
+  }
+  87% {
+    text-shadow: -1px 0 0 red, 1px 0 0 lime;
+  }
+  88% {
+    text-shadow: -1px 0 0 red, 1px 0 0 lime;
+  }
+  89% {
+    text-shadow: -1px 0 0 red, 1px 0 0 lime;
   }
   90% {
-    clip: rect(103px, 350px, 31px, 30px);
+    text-shadow: -1px 0 0 red, 1px 0 0 lime;
+  }
+  91% {
+    text-shadow: 60px 0 0 lime, -60px 0 0 blue;
+  }
+  92% {
+    text-shadow: 0 0 0 lime, 0 0 0 blue;
+  }
+  92% {
+    text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;
+  }
+  93% {
+    text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;
+  }
+  94% {
+    text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;
   }
   95% {
-    clip: rect(109px, 350px, 53px, 30px);
+    text-shadow: 0.7px 0 0 blue, -0.7px 0 0 lime;
+  }
+  96% {
+    text-shadow: -1px 0 0 blue, 1px 0 0 lime;
+  }
+  97% {
+    text-shadow: -1px 0 0 blue, 1px 0 0 lime;
+  }
+  98% {
+    text-shadow: -1px 0 0 blue, 1px 0 0 lime;
+  }
+  99% {
+    text-shadow: -1px 0 0 blue, 1px 0 0 lime;
   }
   100% {
-    clip: rect(55px, 350px, 55px, 30px);
+    text-shadow: -1px 0 0 blue, 1px 0 0 lime;
   }
 }
 
-@keyframes glitch-animation-2 {
-  0% {
-    clip: rect(6px, 350px, 58px, 30px);
-  }
-  5% {
-    clip: rect(112px, 350px, 44px, 30px);
-  }
-  10% {
-    clip: rect(14px, 350px, 119px, 30px);
-  }
-  15% {
-    clip: rect(80px, 350px, 95px, 30px);
-  }
-  20% {
-    clip: rect(102px, 350px, 111px, 30px);
-  }
-  25% {
-    clip: rect(43px, 350px, 69px, 30px);
-  }
-  30% {
-    clip: rect(128px, 350px, 8px, 30px);
-  }
-  35% {
-    clip: rect(145px, 350px, 59px, 30px);
-  }
-  40% {
-    clip: rect(130px, 350px, 85px, 30px);
-  }
-  45% {
-    clip: rect(96px, 350px, 17px, 30px);
-  }
-  50% {
-    clip: rect(41px, 350px, 75px, 30px);
-  }
-  55% {
-    clip: rect(137px, 350px, 130px, 30px);
-  }
-  60% {
-    clip: rect(119px, 350px, 51px, 30px);
-  }
-  65% {
-    clip: rect(67px, 350px, 124px, 30px);
-  }
-  70% {
-    clip: rect(62px, 350px, 50px, 30px);
-  }
-  75% {
-    clip: rect(55px, 350px, 127px, 30px);
-  }
-  80% {
-    clip: rect(139px, 350px, 3px, 30px);
-  }
-  85% {
-    clip: rect(43px, 350px, 136px, 30px);
-  }
-  90% {
-    clip: rect(66px, 350px, 80px, 30px);
-  }
-  95% {
-    clip: rect(143px, 350px, 41px, 30px);
-  }
-  100% {
-    clip: rect(91px, 350px, 144px, 30px);
-  }
-}
 
 </style>
 
 
-
-<div class="wrapper">
-  <h1 class="glitch">Glitch</h1>
-</div>
+<span>DYTPlAY</span>
