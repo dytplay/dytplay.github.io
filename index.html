@@ -13,122 +13,56 @@
   <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
-<script> 
 
-$(document).ready(function() {
-  $('i').hide();
-})
-
-$(window).load(function() {
-  $('i').show();
-
-  var twitterPos = $('#twitter').position();
-  var githubPos = $('#github').position();
-  var stackPos = $('#stack').position();
-  var linkedinPos = $('#linkedin').position();
-  var codePos = $('#code').position();
-  var plusPos = $('#plus').position();
-  var mailPos = $('#mail').position();
-  var imgPos = $('.me').position();
-  
-  $('i').css({
-    position: 'absolute',
-    zIndex: '1',
-    top: imgPos.top + 100,
-    left: '47%'
-  });
-  
-  setTimeout(function() {
-    $('#twitter').animate({
-      top: twitterPos.top + 10,
-      left: twitterPos.left - 10
-    }, 500);
-  }, 250);
-  
-  setTimeout(function() {
-    $('#twitter').animate({
-      top: twitterPos.top,
-      left: twitterPos.left
-    }, 250);
-    
-    $('#github').animate({
-      top: githubPos.top + 10,
-      left: githubPos.left - 6
-    }, 500);
-  }, 500);
-  
-  setTimeout(function() {
-    $('#github').animate({
-      top: githubPos.top,
-      left: githubPos.left
-    }, 250);
-    
-    $('#stack').animate({
-      top: stackPos.top + 10,
-      left: stackPos.left - 3
-    }, 500);
-  }, 750);
-  
-  setTimeout(function() {
-    $('#stack').animate({
-      top: stackPos.top,
-      left: stackPos.left
-    }, 250);
-    
-    $('#linkedin').animate({
-      top: linkedinPos.top + 10,
-      left: linkedinPos.left
-    }, 500);
-  }, 1000);
-  
-  setTimeout(function() {
-    $('#linkedin').animate({
-      top: linkedinPos.top,
-      left: linkedinPos.left
-    }, 250);
-    
-    $('#code').animate({
-      top: codePos.top + 10,
-      left: codePos.left + 3
-    }, 500);
-  }, 1250);
-  
-  setTimeout(function() {
-    $('#code').animate({
-      top: codePos.top,
-      left: codePos.left
-    }, 250);
-    
-    $('#plus').animate({
-      top: plusPos.top + 10,
-      left: plusPos.left + 6
-    }, 500);
-  }, 1500);
-  
-  setTimeout(function() {
-    $('#plus').animate({
-      top: plusPos.top,
-      left: plusPos.left
-    }, 250);
-    
-    $('#mail').animate({
-      top: mailPos.top + 10,
-      left: mailPos.left + 10
-    }, 500);
-  }, 1750);
-  
-  setTimeout(function() {
-    $('#mail').animate({
-      top: mailPos.top,
-      left: mailPos.left
-    }, 250);
-  }, 2000);
-  
-})
-    
-</script>
 
 <style>
+.flex-center {
+  width: 100%;
+  min-height: 50vh;
+  background: #000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.icon-3d {
+  padding: 10px;
+  -webkit-animation: icon3d 200ms 10;
+  animation: icon3d 200ms 10;
+  color: #fff;
+}
+
+.icon-3d:hover {
+  -webkit-animation: icon3d 200ms infinite;
+  animation: icon3d 200ms infinite;
+}
+
+@keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px #f44336, -5px -6px #2196f3;
+  }
+  25% {
+    text-shadow: -5px -6px #f44336, 5px 4px #2196f3;
+  }
+  50% {
+    text-shadow: 5px -4px #f44336, -8px 4px #2196f3;
+  }
+  75% {
+    text-shadow: -8px -4px #f44336, -5px -4px #2196f3;
+  }
+  100% {
+    text-shadow: -5px 0 #f44336, 5px -4px #2196f3;
+  }
+}
 
 body {
   background: black;
@@ -137,67 +71,7 @@ body {
     z-index: 2;
     
     }
-.me {
-  display: block;
-  margin: 2em auto;
-  margin-bottom: 3em;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  position: relative;
-  z-index: 2;
-}
 
-.social {
-  text-align: center;
-  font-size: 2.5em;
-  color: #555;
-  overflow: hidden;
-}
-
-.social a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.social i {
-  margin: .3em;
-  cursor: pointer;
-  transition: color 300ms ease, margin-top 300ms ease;
-  transform: translateZ(0);
-}
-
-.social i:hover {
-  margin-top: -1px;
-}
-
-.social i#twitter:hover {
-  color: #77DDF6;
-}
-
-.social i#github:hover {
-  color: black;
-}
-
-.social i#linkedin:hover {
-  color: #0177B5;
-}
-
-.social i#code:hover {
-  color: #29A329;
-}
-
-.social i#stack:hover {
-  color: #ED780E;
-}
-
-.social i#plus:hover {
-  color: #D43402;
-}
-
-.social i#mail:hover {
-  color: #F7B401;
-}
 
 span {
  color: white;
@@ -528,16 +402,18 @@ span {
 
 
 <span>DYTPlAY</span>
+<div class="flex-center">
+  <i class="fa fa-github fa-4x icon-3d"></i>
+  <i class="fa fa-gitlab fa-4x icon-3d"></i>
+  <i class="fa fa-bitbucket fa-4x icon-3d"></i>
+  <i class="fa fa-git fa-4x icon-3d"></i>
+</div>
 
-<img class="me" src="" alt="" />
-<div class="social">
-  <a href="https://twitter.com/bphillips201"><i id="twitter" class="link icon-twitter"></i></a>
-  <i id="github" class="link icon-github"></i>
-  <i id="stack" class="link icon-stackexchange"></i>
-  <i id="linkedin" class="link icon-linkedin-sign"></i>
-  <i id="code" class="ilink con-code"></i>
-  <i id="plus" class="link icon-google-plus-sign"></i>
-  <i id="mail" class="link icon-envelope"></i> 
+<div class="flex-center">
+  <i class="fa fa-twitter fa-4x icon-3d"></i>
+  <i class="fa fa-facebook fa-4x icon-3d"></i>
+  <i class="fa fa-instagram fa-4x icon-3d"></i>
+  <i class="fa fa-whatsapp fa-4x icon-3d"></i>
 </div>
     
     
