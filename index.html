@@ -4,7 +4,7 @@
     Version:        1.0
     Author:         DYTPLAY
 ================================== -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
 <link href="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -430,20 +430,22 @@ span {
 }
 </style>
 <script>var current = 1; //keeps track of the current div
-var height = $(".roles").height(); //the height of the roles div
-var numberDivs = $(".roles").children().length; //the number of children of the roles div
-var first = $(".roles div:nth-child(1)"); //the first div nested in roles div
+var height = $('.roles').height(); //the height of the roles div
+var numberDivs = $('.roles').children().length; //the number of children of the roles div
+var first = $('.roles div:nth-child(1)'); //the first div nested in roles div
 setInterval(function() {
-  var number = current * -height;
-  first.css("margin-top", number + "px");
-  if (current === numberDivs) {
-    first.css("margin-top", "0px");
-    current = 1;
-  } else current++;
+    var number = current * -height;
+    first.css('margin-top', number + 'px');
+    if (current === numberDivs) {
+        first.css('margin-top', '0px');
+        current = 1;
+    } else current++;
 }, 2000);
 </script>
 
 <span>DYTPlAY</span>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 <div class="wrapper">
   <div class="roles">
       <div>
@@ -461,7 +463,6 @@ setInterval(function() {
       <div>
           I am an aspiring individual.
       </div>
-  </div>
 </div>
 <div class="flex-center">
   <a   href="https://github.com/dytplay"  class="fa fa-github fa-4x icon-3d"></a>
