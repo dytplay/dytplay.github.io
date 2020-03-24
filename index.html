@@ -1,90 +1,100 @@
-<!DOCTYPE html>
-<!-- ==============================
-    Project:       DYTPLAY Author page
-    Version:        2.0
-    Author:         DYTPLAY
-================================== -->
-<script>
-setTimeout(function(){
-	document.body.classList.add('body_visible');
-}, 200);
- </script>
-<style>
-@font-face {
-	font-family: 'font85381f59875a5d218e7e3e7d19db4358';
-
-	src:    url('https://nomail.com.ua/files/eot/85381f59875a5d218e7e3e7d19db4358.eot?#iefix') format('embedded-opentype'),
-	url('https://nomail.com.ua/files/woff/85381f59875a5d218e7e3e7d19db4358.woff') format('woff'),
-	url('https://nomail.com.ua/files/woff2/85381f59875a5d218e7e3e7d19db4358.woff2') format('woff2');
-}
-
-@font-face { font-family: 'FSElliotPro-Heavy';  src: local('FSElliotPro-Heavy'), url('https://nomail.com.ua/files/woff/85381f59875a5d218e7e3e7d19db4358.woff') format('woff'); }
-.body_hide {
-	opacity: 0;
-	transition: .9s opacity ease-in-out;
-}
-.body_visible {
-	opacity: 1;
-}
+<style type="text/css">
 body {
-font-family: 'FSElliotPro-Heavy';
-background-color: #151515;
-color:white;
-margin: 0px;
-font-family: monospace; max-width: 100% ;
+ background: url(https://static.locals.md/2014/04/ucraine.jpg) top / cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+td {
+	text-align: center;
+	box-shadow: 0px 0px 3px 0px black;
+	color: #5d5d5d;
+}
+th {
+	    padding: 5px;
+    box-shadow: 0px 0px 8px 0px #00000052;
+    border-radius: 5px;
+}
+td {
+	padding: 5px;
+    box-shadow: 0px 0px 3px 0px #00000059;
+    border-radius: 3px;
+    background-color: #f5f5f545;
+}
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+ text-decoration: none;
+    color: #000;
+    background-color: #00000000;
+    padding: 13px;
+    box-shadow: 0px 3px 40px 5px #00000033;
+    border-radius: 4px;
 
 }
-.container-fluid {
-    width: 100%;
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.container {
-    width: 100%;
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.knopka {
-    padding: 7px 10px 7px 10px;
-    background-color:#151515;
-    color: white;
-    border: 0px;
-    border-radius: 10px;
+.menu{
     text-align: center;
-	box-shadow: #00000063 0 0 20px;}
-	
-	
- 
+    font-size: 15px;
+    font-family: sans-serif;
+}
+.whitebg{
+	    background-color: #ffffffcf;
+    padding: 20px 0px 22px 10px;
+    width: 800px;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 10%;
+}
 </style>
-<body style="background-color: #eceef2;; color: #151515; font-family: 'FSElliotPro-Heavy';" class="body_hide">
-<div id='stars'></div>
-<div id='stars2'></div>
-<div id='stars3'></div>
+<body>
+	<div class="whitebg">
+<h1 style="text-align: center; font-size: 22px; font-family: SANS-SERIF;  padding: 25px;"> База данных скота </h1>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.1">
+<div class="menu">
+<a href="/1.php">Сортировка по стоимости</a>
+<a href="/2.php">Возраст меньше двух лет</a>
+<a href="/3.php">Животные вес которых больше 150</a>
+</div>
 
+<h1 style="text-align: center; font-size: 22px; font-family: SANS-SERIF;  padding: 22px;"> Выведены все животные в алфавитном порядке по названию животных </h1>
 
-<div class="container container-fluid" >
-    <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4"><div style="padding-top: 12% ">
-<h1 class="uk-heading-primary" style="text-align: center;      text-shadow: #00000063 0 0 20px;   font-size: 29px;">Добро пожаловать</h1> 
-<h1 class="uk-heading-primary" style="text-align: center;      text-shadow: #00000063 0 0 20px;  padding-bottom: 20px;  font-size: 29px;">Я DYTPLAY</h1> 
-<div class="col-sm-4"></div>
-  
-</div></div>
-        <div class="col-sm-4" style="text-align: center;         padding-bottom: 50px;"><a  class="knopka">Начать</a></div>
-       
-       
-    </div>
-    <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4"><div style=" text-shadow: #00000063 0 0 20px;   text-align: center;"><span> Created by  DYTPLAY with <a style="color:red; text-decoration:none;" >❤  </a> </span></div></div>
-        <div class="col-sm-4"></div>
-    </div>
+<table  style="margin: 0 auto;  padding: 5px; box-shadow: 0px 3px 40px 5px #00000054;   font-family: sans-serif;    border-radius: 5px;   border-spacing: 11px 6px" class="table table-striped table-hover ">
+	<thead>
+		<tr>
+			<th>Вид</th>
+			<th>Наименование</th>
+			<th>Вес</th>
+			<th>Стоимость</th>
+			<th>Окрас</th>
+			<th>Чем питается</th>
+			<th>Возраст</th>
+			<th>Кличка</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<?php
+		$con = new mysqli("localhost","wp", "wp", "skot");
+
+		$execItems = $con->query("SELECT * FROM ferma ORDER BY name ASC");
+
+		while($infoItems = $execItems->fetch_array()){
+			echo    "<tr>
+			<td>".$infoItems['type']."</td>
+			<td>".$infoItems['name']."</td>
+			<td>".$infoItems['kg']."</td>
+			<td>".$infoItems['cost']."</td>
+			<td>".$infoItems['color']."</td>
+			<td>".$infoItems['eat']."</td>
+			<td>".$infoItems['age']."</td>
+			<td>".$infoItems['nik']."</td>
+			</tr>
+			";
+
+		}
+		?>
+	</tbody>
+</table>
 </div>
 </body>
